@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1C87B1"
+    android:orientation="vertical"
+    tools:context=".bmiActivity">
+
+    <TextView
+        android:id="@+id/YourTDEE"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="600dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="28sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/TDEE_TV"
+        android:layout_alignTop="@id/TDEE_TV"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/InfoBMI"
+        app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+    <TextView
+        android:id="@+id/TDEE_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/tdee"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/TotalDaily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/TDEE_TV"
+        android:layout_alignTop="@id/TDEE_TV"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="-98dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/total_daily_energy_expenditure"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/UseOtherValues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="100dp"
+        android:layout_alignTop="@id/TotalDaily"
+        android:text="@string/use_different_values" />
+
+
+    <LinearLayout
+        android:id="@+id/LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginTop="210dp"
+        android:orientation="vertical"
+        tools:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/weight"
+            android:textColor="#000000"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/HeightTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/height2"
+            android:textColor="#000000"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/AgeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/age"
+            android:textColor="#000000"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/GenderTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/gender"
+            android:textColor="#000000"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/ActivityLevelTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/activity_level"
+            android:textColor="#000000"
+            android:textSize="28sp" />
+
+
+        <info.hoang8f.android.segmented.SegmentedGroup
+            android:id="@+id/GenderSegmented"
+            android:layout_width="134dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="-75dp"
+            android:orientation="horizontal"
+            app:sc_border_width="2dp"
+            app:sc_checked_text_color="#FFFFFF"
+            app:sc_corner_radius="10dp"
+            app:sc_tint_color="#1022CD">
+
+
+            <RadioButton
+                android:id="@+id/SegmentedButton1"
+                style="@style/RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/male" />
+
+            <RadioButton
+                android:id="@+id/SegmentedButton2"
+                style="@style/RadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/female" />
+
+        </info.hoang8f.android.segmented.SegmentedGroup>
+
+        <EditText
+            android:id="@+id/WeightET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="-185dp"
+            android:ems="10"
+            android:hint="@string/kg"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/HeightET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:ems="10"
+            android:hint="@string/cm"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:textColor="#000000" />
+
+
+        <EditText
+            android:id="@+id/AgeET"
+            android:layout_width="126dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="15dp"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/Other_Calc_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="130dp"
+            android:text="@string/calculate"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="230dp"
+            android:layout_marginTop="-110dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown" />
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
